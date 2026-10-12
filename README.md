@@ -86,7 +86,7 @@ Optional for later milestones and production:
    npm run dev
 ```
 
-9. Open http://localhost:3000. The landing page is at `/` and the dashboard is at `/dashboard`. A new organization correctly shows zero files and empty states.
+9. Open http://localhost:3000. Public pages are at `/`, `/about` and `/contact`; the login and registration previews are at `/login` and `/register`. The dashboard is at `/dashboard`. A new organization correctly shows zero files and empty states.
 
 Migrations are never run automatically on application startup. Always run `npm run db:migrate` yourself.
 
@@ -196,7 +196,8 @@ docs/             architecture, database, security, API, deployment, trade-offs
 
 ## What works today
 
-- Public landing page, branded loading, not-found and error pages.
+- Public home, about and contact pages with shared navigation/footer; login and registration preview screens.
+- Branded loading, not-found and error pages.
 - Workspace shell with responsive navigation and a mobile drawer.
 - Dashboard backed by real queries: active files, storage used and available, pending invitations, storage by department and recent audit activity.
 - Initial schema and migration (19 tables including auth tables), validated environment, typed error model, storage adapter interface with an S3/R2 implementation and server-generated object keys.
@@ -204,7 +205,7 @@ docs/             architecture, database, security, API, deployment, trade-offs
 
 ## Not built yet
 
-- Authentication and tenant resolution (Milestone 2)
+- Authentication and tenant resolution (Milestone 2). The login and registration pages are UI previews only and do not submit or store credentials.
 - Folders, files, uploads and downloads (Milestone 3)
 - Sharing and permissions (Milestone 4)
 - Search, activity pages, service worker and offline page (Milestone 5)
