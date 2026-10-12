@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #173d32;
+  --color-forest-hover: #1f5143;
+  --color-mint: #ddf4e8;
+  --color-mint-strong: #b9e4cd;
+  --color-canvas: #f6f8f5;
+  --color-ink: #24352e;
+  --color-ink-soft: #526158;
+  --color-line: #e1e8e2;
+  --color-danger: #b42318;
+  --color-danger-bg: #fef3f2;
+  --color-warning: #92400e;
+  --color-warning-bg: #fffaeb;
+
+  --font-sans: "Avenir Next", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(23 61 50 / 0.06);
+  --shadow-pop: 0 8px 24px rgb(23 61 50 / 0.12);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.on-forest :focus-visible {
+  outline-color: var(--color-mint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

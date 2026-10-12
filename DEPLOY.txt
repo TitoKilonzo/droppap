@@ -1,0 +1,7 @@
+DropPap production package (Milestone 1)
+
+Contents: application source, migrations, docs. Excludes tests, CI and seed data.
+1. Read docs/deployment.md.
+2. Set environment from .env.production.example in your host secret manager.
+3. npm install, then npm run db:migrate (explicitly), then npm run build and npm run start.
+This package is not for real users until authentication ships (Milestone 2).
